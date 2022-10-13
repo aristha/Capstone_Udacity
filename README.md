@@ -1,1 +1,3 @@
-# Capstone_Udacity
+# Udacity Cloud Developer Nanodegree Capstone
+
+Functionalities:
