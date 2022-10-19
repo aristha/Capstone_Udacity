@@ -1,0 +1,245 @@
+{
+	"info": {
+		"_postman_id": "f9b6e674-fc4f-4bbe-b99c-5a89a26fd805",
+		"name": "Capstone_Udacity_TamHV2",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "17438336"
+	},
+	"item": [
+		{
+			"name": "Filter orders by name",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"var jsonData = JSON.parse(responseBody);\r",
+							"\r",
+							"    pm.collectionVariables.set(\"prevKey\", pm.collectionVariables.get(\"nextKey\"));\r",
+							"    pm.collectionVariables.set(\"nextKey\", jsonData.nextKey);\r",
+							"\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{authToken}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{host}}/dev/orders?orderName=&limit=10&nextKey={{nextKey}}",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"dev",
+						"orders"
+					],
+					"query": [
+						{
+							"key": "orderName",
+							"value": ""
+						},
+						{
+							"key": "limit",
+							"value": "10"
+						},
+						{
+							"key": "nextKey",
+							"value": "{{nextKey}}"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Order",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{authToken}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"name\": \"Coffee\",\r\n\t\"description\": \"Coffee\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/dev/orders",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"dev",
+						"orders"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Request",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{authToken}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"name\": \"order tee\",\r\n\t\"description\": \"tee\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/dev/orders/{{orderId}}",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"dev",
+						"orders",
+						"{{orderId}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Order",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{authToken}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/dev/orders/{{orderId}}",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"dev",
+						"orders",
+						"{{orderId}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get attachment URL S3",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer {{authToken}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{host}}/dev/orders/{{orderId}}/attachment",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"dev",
+						"orders",
+						"{{orderId}}",
+						"attachment"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "host",
+			"value": "https://wr2es4czbi.execute-api.us-east-1.amazonaws.com",
+			"type": "string"
+		},
+		{
+			"key": "orderId",
+			"value": "cdc224f1-ecd8-469e-8dac-dfaf741fdd65",
+			"type": "string"
+		},
+		{
+			"key": "authToken",
+			"value": "LjVieiJ9.KAJNaI9kywmxIahz7VIcfnr06cJ91D1bajfLEwsm1uDqbiIt_SBf3npJ9IxFvJibhok0qUDruJTsBFS5nM7tH2l4cewhhpTl2JxCMkNdr7E2NfnXgHeQw11PDBGNmGuGchcvnp6qJPP_MyIbU02P0nAmo0L5MV7UGmVDrXhSwaUi_y7LbDBkBZ0zm0z7XKswMPywg0_r_IaqK21Zm1ll-hhMMvfzNbrmGq-vkXYXuYrzn5Fp5TF_ZiVkCv8XJRPbZkKqPKlRnZi4sCBipN8ipZ1ccG2VQfE8zi5aJ_Vplq9nPgxrPrJRQw50MvxqWwj8FSMGK7oxS2Z7VmKWAZsvbg",
+			"type": "string"
+		},
+		{
+			"key": "nextKey",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "prevKey",
+			"value": ""
+		}
+	]
+}
