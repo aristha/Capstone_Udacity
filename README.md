@@ -1,6 +1,7 @@
 # Udacity Cloud Developer Nanodegree Capstone
 
-I use option 2
+I use option 2 in Project Rubric.
+
 It is a Serverless web application
 
 Udacity Capstone Requirements
