@@ -39,6 +39,10 @@ Paginating  dynamoDB use LastEvaluatedKey
 
 
 I. Use Postman
+
+use colectton ![Collecttion](./Capstone_Udacity_TamHV2.postman_collection.json)
+![Filter postman](Images/postman.png)
+
 1. Filter Order
     - filter by name
 ![Filter by name](Images/filterByName.png)
