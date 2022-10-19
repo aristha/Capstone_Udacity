@@ -10,9 +10,11 @@ Use PostMan
 Functiona
 1. Filter Order
     - filter by name
-https://github.com/aristha/Capstone_Udacity/blob/074d06339d72c8dfc15cef692bb7f23705adb929/Images/filter%20by%20name.png
+![Filter by name](Images/filter by name.png)
     - User LastEvaluatedKey
-https://github.com/aristha/Capstone_Udacity/blob/074d06339d72c8dfc15cef692bb7f23705adb929/Images/Filter1.png
+![Filter by name](Images/Filter1.png)
+![Filter by name](Images/Filter2.png)
+
 Udacity Capstone Requirements
 
 https://github.com/aristha/Capstone_Udacity/blob/074d06339d72c8dfc15cef692bb7f23705adb929/Images/filter2.png
