@@ -8,7 +8,7 @@ import { CreateOrderRequest } from '../types/CreateOrderRequest';
 
 export async function getOrders(idToken: string, orderName: string = ''): Promise<Order[]> {
   console.log('Fetching orders')
-  const response = await Axios.get(`${apiEndpoint}/orders?toDoName=${orderName}`, {
+  const response = await Axios.get(`${apiEndpoint}/orders?orderName=${orderName}`, {
     headers: {
       'Content-Type': 'application/json',
       'Authorization': `Bearer ${idToken}`

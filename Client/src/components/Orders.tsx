@@ -124,7 +124,7 @@ export class Todos extends React.PureComponent<TodosProps, OrdersState> {
       return;
     }
     if (this.state.openEdit) {
-      await patchOrder(this.props.auth.getIdToken(), this.state.currTodo.orderId, this.state.currTodo)
+      await patchOrder(this.props.auth.getIdToken(), this.state.currTodo.orderId, {name:this.state.newOrderName, description:this.state.description,attachmentUrl:this.state.currTodo.attachmentUrl})
       const orders = await getOrders(this.props.auth.getIdToken())
       this.setState({
         orders: [...orders],
@@ -155,6 +155,7 @@ export class Todos extends React.PureComponent<TodosProps, OrdersState> {
   handleCancel = () => {
     this.setState({
       newOrderName: '',
+      description:'',
       isModalOpen: false,
       openEdit: false
     })
