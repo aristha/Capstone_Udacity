@@ -34,7 +34,7 @@
 					}
 				],
 				"url": {
-					"raw": "{{host}}/dev/orders?orderName=&limit=1&nextKey={{nextKey}}",
+					"raw": "{{host}}/dev/orders?orderName=&limit=10&nextKey={{nextKey}}",
 					"host": [
 						"{{host}}"
 					],
@@ -49,7 +49,7 @@
 						},
 						{
 							"key": "limit",
-							"value": "1"
+							"value": "10"
 						},
 						{
 							"key": "nextKey",
@@ -73,7 +73,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n\t\"name\": \"Order 20\",\r\n\t\"description\": \"now\"\r\n}",
+					"raw": "{\r\n\t\"name\": \"Coffee\",\r\n\t\"description\": \"Coffee\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -96,7 +96,7 @@
 		{
 			"name": "Update Request",
 			"request": {
-				"method": "PUT",
+				"method": "PATCH",
 				"header": [
 					{
 						"key": "Authorization",
@@ -106,7 +106,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n\t\"name\": \"order tee\",\r\n\t\"description\": \"coffee\"\r\n}",
+					"raw": "{\r\n\t\"name\": \"order tee\",\r\n\t\"description\": \"tee\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -220,7 +220,7 @@
 		},
 		{
 			"key": "orderId",
-			"value": "a04a8924-85be-4596-9e7b-cf78017f908c",
+			"value": "cdc224f1-ecd8-469e-8dac-dfaf741fdd65",
 			"type": "string"
 		},
 		{
@@ -236,6 +236,10 @@
 		{
 			"value": "",
 			"type": "string"
+		},
+		{
+			"key": "prevKey",
+			"value": ""
 		}
 	]
 }
