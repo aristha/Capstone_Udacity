@@ -3,21 +3,8 @@
 I use option 2
 It is a Serverless web application
 
-You can Create, update, delete and filter order by name
-Paginating  dynamoDB use LastEvaluatedKey 
-
-Use PostMan
-Functiona
-1. Filter Order
-    - filter by name
-![Filter by name](Images/filter by name.png)
-    - User LastEvaluatedKey
-![Filter by name](Images/Filter1.png)
-![Filter by name](Images/Filter2.png)
-
 Udacity Capstone Requirements
 
-https://github.com/aristha/Capstone_Udacity/blob/074d06339d72c8dfc15cef692bb7f23705adb929/Images/filter2.png
  - Functionality
     + A user of the web application can use the interface to create, delete and complete an item.
     + A user of the web interface can click on a "pencil" button, then select and upload a file. A file should appear in the list of items on the home page.
@@ -45,3 +32,56 @@ https://github.com/aristha/Capstone_Udacity/blob/074d06339d72c8dfc15cef692bb7f23
       - AttributeName: sortKey
         KeyType: RANGE
     + Items are fetched using the "query()" method and not "scan()" method (which is less efficient on large datasets)
+
+You can Create, update, delete and filter order by name
+Paginating  dynamoDB use LastEvaluatedKey 
+
+
+
+I. Use Postman
+1. Filter Order
+    - filter by name
+![Filter by name](Images/filterByName.png)
+    - User LastEvaluatedKey
+![Filter use LastEvaluatedKey](Images/Filter1.png)
+
+![Filter use LastEvaluatedKey](Images/Filter2.png)
+2. Create Order
+
+![Create Order](Images/CreateOrder.png)
+
+3. Update Order
+![Update Order](Images/update.png)
+
+4. Delete order
+![Update Order](Images/Delete.png)
+
+5. Get Url
+![Update Order](Images/GetUploadUrl.png)
+
+II. Run app
+
+cd Client
+npm start
+1. login
+![Update Order](Images/App1.png)
+![Update Order](Images/App2.png)
+![Update Order](Images/App3.png)
+2. Filter
+![Update Order](Images/App4.png)
+![Update Order](Images/App5.png)
+3. New Order
+![Update Order](Images/NewOrder1.png)
+![Update Order](Images/NewOrder2.png)
+![Update Order](Images/App6.png)
+![Update Order](Images/App7.png)
+4. Delete
+![Update Order](Images/App8.png)
+![Update Order](Images/App9.png)
+![Update Order](Images/App10.png)
+
+5. Upload
+![Update Order](Images/App11.png)
+![Update Order](Images/App12.png)
+![Update Order](Images/App13.png)
+![Update Order](Images/App14.png)
