@@ -1,13 +1,21 @@
 # Udacity Cloud Developer Nanodegree Capstone
 
-i use option 2
+I use option 2
 It is a Serverless web application
 
 You can Create, update, delete and filter order by name
 Paginating  dynamoDB use LastEvaluatedKey 
 
-
+Use PostMan
+Functiona
+1. Filter Order
+    - filter by name
+https://github.com/aristha/Capstone_Udacity/blob/074d06339d72c8dfc15cef692bb7f23705adb929/Images/filter%20by%20name.png
+    - User LastEvaluatedKey
+https://github.com/aristha/Capstone_Udacity/blob/074d06339d72c8dfc15cef692bb7f23705adb929/Images/Filter1.png
 Udacity Capstone Requirements
+
+https://github.com/aristha/Capstone_Udacity/blob/074d06339d72c8dfc15cef692bb7f23705adb929/Images/filter2.png
  - Functionality
     + A user of the web application can use the interface to create, delete and complete an item.
     + A user of the web interface can click on a "pencil" button, then select and upload a file. A file should appear in the list of items on the home page.
